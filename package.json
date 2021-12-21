@@ -7,7 +7,7 @@
     "build:watch": "tsc --project src/tsconfig.app.json --watch",
     "lint": "eslint ./src",
     "test": "tsc --noEmit -p . && jest --no-cache",
-    "test:watch": "tsc --noEmit -p . && jest --no-cache --watch"
+    "test:watch": "tsc --noEmit -p . && jest --no-cache --watchAll"
   },
   "repository": {
     "type": "git",
