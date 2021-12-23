@@ -41,3 +41,4 @@ _For more info, please refer to the [security](docs/SECURITY.md)._
 This project is licensed under the **MIT license**.
 
 See [LICENSE](LICENSE) for more information.
+
