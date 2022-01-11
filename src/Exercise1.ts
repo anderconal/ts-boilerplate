@@ -12,7 +12,9 @@ export class Exercises {
 
 	modifyArray(): (number|string) [] {
 		const numbersResult: (number|string)[] = this.numbers.map(actualNumber => {
-			if (this.divisibleBy(actualNumber, THREE)) {
+			if (this.divisibleBy(actualNumber, THREE) && this.divisibleBy(actualNumber, FIVE)) {
+				return FIZZ + BUZZ;
+			} else if (this.divisibleBy(actualNumber, THREE)) {
 				return FIZZ;
 			} else if (this.divisibleBy(actualNumber, FIVE)) {
 				return BUZZ;

@@ -17,18 +17,25 @@ describe('Exercise 1', () => {
 		expect(exercisesClass.modifyArray()).toBeDefined()
 	})
 
-	it('fizz function return [1,2]', () => {
+	it('modifyArray function return [1,2]', () => {
 		const exercisesClass = new Exercises(expected);
 		expect(exercisesClass.modifyArray()).toEqual(expect.arrayContaining(expected));
 	})
 
-	it('fizz function return [1,2,"Fizz"]', () => {
+	it('modifyArray function return [1,2,"Fizz"]', () => {
 		const exercisesClass = new Exercises([1,2,3]);
 		expect(exercisesClass.modifyArray()).toEqual(expect.arrayContaining([1,2,'Fizz']));
 	})
 
-	it('fizz function return [1,2,"Fizz","Buzz",4,"Fizz"]', () => {
+	it('modifyArray function return [1,2,"Fizz","Buzz",4,"Fizz"]', () => {
 		const exercisesClass = new Exercises([1,2,3,5,4,9]);
 		expect(exercisesClass.modifyArray()).toEqual(expect.arrayContaining([1,2,'Fizz','Buzz',4,'Fizz']));
 	})
+
+	it('modifyArray function return [1,2,"Fizz","Buzz",4,"Fizz", "Fizz", "FizzBuzz"]', () => {
+		const exercisesClass = new Exercises([1, 2, 3, 5, 4, 9, 12, 15]);
+		expect(exercisesClass.modifyArray()).toEqual(
+			expect.arrayContaining([1, 2, 'Fizz', 'Buzz', 4, 'Fizz', 'Fizz', 'FizzBuzz'])
+		);
+	});
 });
