@@ -1,4 +1,8 @@
-//changes
+const ZERO = 0;
+const THREE = 3;
+const FIVE = 5;
+const FIZZ = 'Fizz';
+const BUZZ = 'Buzz';
 export class Exercises {
 	public numbers: number[];
 
@@ -6,15 +10,16 @@ export class Exercises {
 		this.numbers = numbers
 	}
 
+	divisibleBy(number: number, divisor: number): boolean {
+		return (number % divisor === ZERO);
+	}
+
 	modifyArray(): (number|string) [] {
 		const numbersResult: (number|string)[] = this.numbers.map(actualNumber => {
-			const divisibleBy3 = actualNumber % 3;
-			const divisibleBy5 = actualNumber % 5;
-			if(divisibleBy3 === 0){
-				return 'Fizz';
-			}
-			if(divisibleBy5 === 0){
-				return 'Buzz';
+			if (this.divisibleBy(actualNumber, THREE)) {
+				return FIZZ;
+			} else if (this.divisibleBy(actualNumber, FIVE)) {
+				return BUZZ;
 			}
 
 			return actualNumber;
