@@ -9,7 +9,7 @@ export class FizzBuzz {
 	}
 
 	private static getReplacement(i: number): string | number {
-		if (i === 15) return 'FizzBuzz';
+		if (i % 3 == 0 && i % 5 == 0) return 'FizzBuzz';
 		if (i % 3 == 0) return 'Fizz';
 		if (i % 5 == 0) return 'Buzz';
 
