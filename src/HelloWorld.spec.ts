@@ -30,4 +30,8 @@ describe('Fizz', () => {
 		const expectedResult = [1, 2, 'Fizz', 4, 'Buzz'];
 		expect(FizzBuzz.replace(5)).toEqual(expectedResult);
 	});
+	it('If a number is divisible by 3 and by 5 should be replaced with FizzBuzz', () => {
+		const expectedResult = [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz'];
+		expect(FizzBuzz.replace(15)).toEqual(expectedResult);
+	});
 });
