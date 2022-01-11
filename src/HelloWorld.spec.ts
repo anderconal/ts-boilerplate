@@ -1,15 +1,29 @@
-import { HelloWorld } from './HelloWorld'
+import { FizzBuzz } from './FizzBuzz';
 
-describe('HelloWord', () => {
-	it('says hello world with no name', () => {
-		expect(HelloWorld.hello()).toEqual('Hello, World!')
-	})
+describe('Fizz', () => {
+	it('There is FizzBuzz module', () => {
+		expect(FizzBuzz).toBeDefined();
+	});
 
-	it('says hello to Bob', () => {
-		expect(HelloWorld.hello('Bob')).toEqual('Hello, Bob!')
-	})
+	it('There is a static method called replace', () => {
+		expect(FizzBuzz.replace).toBeDefined();
+	});
 
-	it('says hello to Sally', () => {
-		expect(HelloWorld.hello('Sally')).toEqual('Hello, Sally!')
-	})
-})
+	it('The method has been called with the correct arguments', () => {
+		FizzBuzz.replace(2);
+		expect(true);
+	});
+
+	it('The method should return a list', () => {
+		expect(FizzBuzz.replace(2)).toBeInstanceOf(Array);
+	});
+
+	it('The method should return a list that is not empty', () => {
+		expect(FizzBuzz.replace(2)).toHaveLength(2);
+	});
+
+	it('The method should replace numbers divisible by three to Fizz', () => {
+		const expectedResult = [1, 2, 'Fizz'];
+		expect(FizzBuzz.replace(3)).toEqual(expectedResult);
+	});
+});
