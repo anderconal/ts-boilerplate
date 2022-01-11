@@ -6,7 +6,7 @@ export class Exercises {
 		this.numbers = numbers
 	}
 
-	fizz(): (number|string) [] {
+	modifyArray(): (number|string) [] {
 		const numbersResult: (number|string)[] = this.numbers.map(actualNumber => {
 			const divisibleBy3 = actualNumber % 3;
 			if(divisibleBy3 === 0){

@@ -12,19 +12,18 @@ describe('Exercise 1', () => {
 		expect(exercisesClass).toBeDefined()
 	})
 
-	it('fizz functions exist', () => {
+	it('modifyArray functions exist', () => {
 		const exercisesClass = new Exercises(expected);
-		expect(exercisesClass.fizz()).toBeDefined()
+		expect(exercisesClass.modifyArray()).toBeDefined()
 	})
 
 	it('fizz function return [1,2]', () => {
 		const exercisesClass = new Exercises(expected);
-		expect(exercisesClass.fizz()).toEqual(expect.arrayContaining(expected));
+		expect(exercisesClass.modifyArray()).toEqual(expect.arrayContaining(expected));
 	})
 
 	it('fizz function return [1,2,"Fizz"]', () => {
 		const exercisesClass = new Exercises([1,2,3]);
-		expect(exercisesClass.fizz()).toEqual(expect.arrayContaining([1,2,'Fizz']));
+		expect(exercisesClass.modifyArray()).toEqual(expect.arrayContaining([1,2,'Fizz']));
 	})
-})
-
+});
