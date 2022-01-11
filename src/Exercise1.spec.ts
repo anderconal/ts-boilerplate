@@ -26,6 +26,7 @@ describe('Exercise 1', () => {
 		const exercisesClass = new Exercises([1,2,3]);
 		expect(exercisesClass.modifyArray()).toEqual(expect.arrayContaining([1,2,'Fizz']));
 	})
+
 	it('fizz function return [1,2,"Fizz","Buzz",4,"Fizz"]', () => {
 		const exercisesClass = new Exercises([1,2,3,5,4,9]);
 		expect(exercisesClass.modifyArray()).toEqual(expect.arrayContaining([1,2,'Fizz','Buzz',4,'Fizz']));

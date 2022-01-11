@@ -1,8 +1,4 @@
-const ZERO = 0;
-const THREE = 3;
-const FIVE = 5;
-const FIZZ = 'Fizz';
-const BUZZ = 'Buzz';
+import { ZERO, THREE, FIVE, FIZZ, BUZZ } from './constants';
 export class Exercises {
 	public numbers: number[];
 
