@@ -1,4 +1,5 @@
-import { ZERO, THREE, FIVE, FIZZ, BUZZ } from './constants';
+import { FIZZ, BUZZ } from './constants';
+import { divisibleByThree, divisibleByFive } from './utils';
 export class Exercises {
 	public numbers: number[];
 
@@ -6,17 +7,16 @@ export class Exercises {
 		this.numbers = numbers
 	}
 
-	divisibleBy(number: number, divisor: number): boolean {
-		return (number % divisor === ZERO);
-	}
-
 	modifyArray(): (number|string) [] {
 		const numbersResult: (number|string)[] = this.numbers.map(actualNumber => {
-			if (this.divisibleBy(actualNumber, THREE) && this.divisibleBy(actualNumber, FIVE)) {
+			if (
+				divisibleByThree(actualNumber) &&
+				divisibleByFive(actualNumber)
+			) {
 				return FIZZ + BUZZ;
-			} else if (this.divisibleBy(actualNumber, THREE)) {
+			} else if (divisibleByThree(actualNumber)) {
 				return FIZZ;
-			} else if (this.divisibleBy(actualNumber, FIVE)) {
+			} else if (divisibleByFive(actualNumber)) {
 				return BUZZ;
 			}
 
