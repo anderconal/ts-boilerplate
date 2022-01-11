@@ -47,4 +47,8 @@ describe('Fizz', () => {
 		const expectedResult = 'Fazz';
 		expect(FizzBuzz.replace(14)[13]).toEqual(expectedResult);
 	});
+	it('If a number is divisible by 7 and 3 we decided to be replace with Fazz up to 21', () => {
+		const expectedResult = 'Fazz';
+		expect(FizzBuzz.replace(21)[20]).toEqual(expectedResult);
+	});
 });
