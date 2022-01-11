@@ -38,4 +38,18 @@ describe('Exercise 1', () => {
 			expect.arrayContaining([1, 2, 'Fizz', 'Buzz', 4, 'Fizz', 'Fizz', 'FizzBuzz'])
 		);
 	});
+
+	it('modifyArray function return [1,2,"Fizz","Buzz",4,"Fizz", "Fizz", "FizzBuzz", 8, "Fazz"]', () => {
+		const exercisesClass = new Exercises([1, 2, 3, 5, 4, 9, 12, 15, 8, 7]);
+		expect(exercisesClass.modifyArray()).toEqual(
+			expect.arrayContaining([1, 2, 'Fizz', 'Buzz', 4, 'Fizz', 'Fizz', 'FizzBuzz', 8, 'Fazz'])
+		);
+	});
+
+	it('modifyArray function return [1,2,"Fizz","Buzz",4,"Fizz", "Fizz", "FizzBuzz", 8, "Fazz", "Fizz"]', () => {
+		const exercisesClass = new Exercises([1, 2, 3, 5, 4, 9, 12, 15, 8, 7, 21]);
+		expect(exercisesClass.modifyArray()).toEqual(
+			expect.arrayContaining([1, 2, 'Fizz', 'Buzz', 4, 'Fizz', 'Fizz', 'FizzBuzz', 8, 'Fazz', 'Fizz'])
+		);
+	});
 });

@@ -1,5 +1,5 @@
-import { FIZZ, BUZZ } from './constants';
-import { divisibleByThree, divisibleByFive } from './utils';
+import { FIZZ, BUZZ, FAZZ } from './constants';
+import { divisibleByThree, divisibleByFive, divisibleBySeven } from './utils';
 export class Exercises {
 	public numbers: number[];
 
@@ -18,6 +18,8 @@ export class Exercises {
 				return FIZZ;
 			} else if (divisibleByFive(actualNumber)) {
 				return BUZZ;
+			} else if (divisibleBySeven(actualNumber)) {
+				return FAZZ;
 			}
 
 			return actualNumber;
