@@ -67,7 +67,7 @@ export class FizzBuzz {
 		if(ruleBuzz.meetsRule(number)){
 			return ruleBuzz.getReplacement();
 		}
-		
+
 		const ruleFizz = new FizzRule();
 		if(ruleFizz.meetsRule(number)){
 			return ruleFizz.getReplacement();
