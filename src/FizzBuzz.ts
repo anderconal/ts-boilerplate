@@ -16,4 +16,19 @@ export class FizzBuzz {
 
 		return number;
 	}
+
+	/*private static getSolidReplacement(number: number): string | number {
+		const ruleArray: RuleInterface[] = [];
+		for (const rule of ruleArray) {
+			if (rule.isDivisible(number)) {
+
+			}
+		}
+
+		return number;
+	}*/
+}
+
+export interface RuleInterface {
+	isDivisible(number: number): boolean;
 }
