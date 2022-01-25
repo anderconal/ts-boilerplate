@@ -13,11 +13,13 @@ export class FizzBuzz {
 		const buzzRule = new BuzzRule();
 		const fazzRule = new FazzRule();
 		const fizzBuzzRule = new FizzBuzzRule();
+		const rulesArray:RuleInterface[]=[fizzBuzzRule, fazzRule , buzzRule, fizzRule]
 
-		if (fizzBuzzRule.isDivisible(number)) return fizzBuzzRule.getMessage();
-		if (fazzRule.isDivisible(number)) return fazzRule.getMessage();
-		if (buzzRule.isDivisible(number)) return buzzRule.getMessage();
-		if (fizzRule.isDivisible(number)) return fizzRule.getMessage();
+		for (const rule of rulesArray) {
+			if (rule.isDivisible(number)) {
+				return rule.getMessage()
+			}
+		}
 
 		return number;
 	}
