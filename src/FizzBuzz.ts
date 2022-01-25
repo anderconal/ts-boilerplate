@@ -28,7 +28,19 @@ export class FizzBuzz {
 		return number;
 	}*/
 }
+export class FizzRule implements RuleInterface {
+	getMessage(): string {
+		return 'Fizz'
+	}
+
+	isDivisible(number: number): boolean {
+		return number % 3 == 0;
+	}
+}
 
 export interface RuleInterface {
+
+	getMessage():string ;
+
 	isDivisible(number: number): boolean;
 }
