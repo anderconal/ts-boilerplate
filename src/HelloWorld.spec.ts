@@ -1,6 +1,11 @@
-import { ReplaceArrayByRules } from './ReplaceArrayByRules';
+import { ReplaceArrayByRules,FizzBuzzRule,FazzRule,BuzzRule,FizzRule } from './ReplaceArrayByRules';
 
-describe('Fizz', () => {
+describe('Replace array by rules', () => {
+	ReplaceArrayByRules.addRuleToArray(new FizzBuzzRule());
+	ReplaceArrayByRules.addRuleToArray(new FazzRule());
+	ReplaceArrayByRules.addRuleToArray(new BuzzRule());
+	ReplaceArrayByRules.addRuleToArray(new FizzRule());
+
 	it('There is ReplaceArrayByRules module', () => {
 		expect(ReplaceArrayByRules).toBeDefined();
 	});
