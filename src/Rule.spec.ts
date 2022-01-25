@@ -1,4 +1,4 @@
-import { FizzRule, BuzzRule, FazzRule, FizzBuzzRule } from './FizzBuzz';
+import { FizzRule, BuzzRule, FazzRule, FizzBuzzRule } from './ReplaceArrayByRules';
 
 describe('Rules Testing', () => {
 	it('Get Fizz ', () => {

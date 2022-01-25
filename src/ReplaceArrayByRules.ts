@@ -1,4 +1,11 @@
-export class FizzBuzz {
+export class ReplaceArrayByRules {
+	private static getArrayRules(): RuleInterface[] {
+		const rulesArray:RuleInterface[] = [];
+		rulesArray.push(new FizzBuzzRule(), new FazzRule(), new BuzzRule(), new FizzRule());
+
+		return rulesArray;
+	}
+
 	static replace(limit: number): (string | number)[] {
 		const replacedFizzArray: (string | number)[] = [];
 		for (let number = 1; number <= limit; number++) {
@@ -9,12 +16,7 @@ export class FizzBuzz {
 	}
 
 	private static getReplacement(number: number): string | number {
-		const fizzRule = new FizzRule();
-		const buzzRule = new BuzzRule();
-		const fazzRule = new FazzRule();
-		const fizzBuzzRule = new FizzBuzzRule();
-		const rulesArray:RuleInterface[]=[fizzBuzzRule, fazzRule , buzzRule, fizzRule]
-
+		const rulesArray: RuleInterface[] = this.getArrayRules();
 		for (const rule of rulesArray) {
 			if (rule.isDivisible(number)) {
 				return rule.getMessage()
