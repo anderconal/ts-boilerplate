@@ -1,46 +1,38 @@
-interface rulesInterface {
-	meetsRule(number:number): boolean;
-	getReplacement(): string;
-}
+import rulesInterface from './Interfaces/Rules';
 
-class FizzRule implements rulesInterface {
-	meetsRule(number: number): boolean {
-		return number % 3 == 0;
-	}
+// interface rulesInterface {
+// 	meetsRule(number:number): boolean;
+// 	getReplacement(): string;
+// }
 
-	getReplacement(): string {
-		return 'Fizz';
-	}
-}
+// class FizzRule implements rulesInterface {
+// 	meetsRule(number: number): boolean {
+// 		return number % 3 == 0;
+// 	}
 
-class BuzzRule implements rulesInterface {
-	meetsRule(number: number): boolean {
-		return number % 5 == 0;
-	}
+// 	getReplacement(): string {
+// 		return 'Fizz';
+// 	}
+// }
 
-	getReplacement(): string {
-		return 'Buzz';
-	}
-}
+//  class FazzRule implements rulesInterface {
+//  	meetsRule(number: number): boolean {
+//  		return number % 7 == 0;
+//  	}
 
- class FazzRule implements rulesInterface {
- 	meetsRule(number: number): boolean {
- 		return number % 7 == 0;
- 	}
+// 	getReplacement(): string {
+// 		return 'Fazz';
+// 	}
+// }
+//  class FizzBuzzRule implements rulesInterface {
+//  	meetsRule(number: number): boolean {
+//  		return (number % 3 == 0 && number % 5 == 0);
+//  	}
 
-	getReplacement(): string {
-		return 'Fazz';
-	}
-}
- class FizzBuzzRule implements rulesInterface {
- 	meetsRule(number: number): boolean {
- 		return (number % 3 == 0 && number % 5 == 0);
- 	}
-
-	getReplacement(): string {
-		return 'FizzBuzz';
-	}
-}
+// 	getReplacement(): string {
+// 		return 'FizzBuzz';
+// 	}
+// }
 export class FizzBuzz {
 	static replace(limit: number): (string | number)[] {
 		const replacedFizzArray: (string | number)[] = [];
