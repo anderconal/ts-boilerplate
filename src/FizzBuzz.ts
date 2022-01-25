@@ -1,38 +1,8 @@
-import rulesInterface from './Interfaces/Rules';
+import BuzzRule from './Rules/BuzzRule';
+import FizzRule from './Rules/FizzRule';
+import FazzRule from './Rules/FazzRule';
+import FizzBuzzRule from './Rules/FizzBuzzRule';
 
-// interface rulesInterface {
-// 	meetsRule(number:number): boolean;
-// 	getReplacement(): string;
-// }
-
-// class FizzRule implements rulesInterface {
-// 	meetsRule(number: number): boolean {
-// 		return number % 3 == 0;
-// 	}
-
-// 	getReplacement(): string {
-// 		return 'Fizz';
-// 	}
-// }
-
-//  class FazzRule implements rulesInterface {
-//  	meetsRule(number: number): boolean {
-//  		return number % 7 == 0;
-//  	}
-
-// 	getReplacement(): string {
-// 		return 'Fazz';
-// 	}
-// }
-//  class FizzBuzzRule implements rulesInterface {
-//  	meetsRule(number: number): boolean {
-//  		return (number % 3 == 0 && number % 5 == 0);
-//  	}
-
-// 	getReplacement(): string {
-// 		return 'FizzBuzz';
-// 	}
-// }
 export class FizzBuzz {
 	static replace(limit: number): (string | number)[] {
 		const replacedFizzArray: (string | number)[] = [];
